@@ -17,13 +17,13 @@ export class AuthService {
 
   login() {
     this.afAuth.auth.signInWithPopup(new firbase.auth.GoogleAuthProvider())
-      .then(_ => this.router.navigate([`/company-lst`])) // warning
+      .then(_ => this.router.navigate([`/dashboard`])) // warning
       .catch(error => console.log('auth error', error));
   }
 
   logout() {
     this.afAuth.auth.signOut();
-    this.router.navigate(['/home'])
+    this.router.navigate(['/'])
   }
 
 }

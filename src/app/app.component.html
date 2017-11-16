@@ -1,18 +1,21 @@
 <mat-toolbar color='primary'>
   <div fxLayoutAlign="space-between center" class="nav-buttons">
 
-    <button mat-button>Home</button>
-    <div *ngIf="(authService.user$ | async)?.uid">
-      <button md-button (click)="authService.login()">Login</button>
-    </div>
+    <button mat-button [routerLink]="['/home']">Home</button>
     <div *ngIf="!(authService.user$ | async)?.uid">
-      <button md-button (click)="authService.logout()">Logout</button>
+      <button mat-button [routerLink]="['/about']">About</button>
+
+      <button mat-button (click)="authService.login()">Login</button>
+    </div>
+    <div *ngIf="(authService.user$ | async)?.uid">
+      <button mat-button (click)="authService.logout()">Logout</button>
+
     </div>
   </div>
 
 </mat-toolbar>
 <div>
   <div fxFlexOffset.gt-sm="15%" fxFlex.gt-sm="70%">
-    test
+    <router-outlet></router-outlet>
   </div>
 </div>
