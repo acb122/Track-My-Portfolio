@@ -1,9 +1,9 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './auth.service';
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,6 @@ import { AngularFireModule } from 'angularfire2';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button'
-
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -46,6 +45,10 @@ const firebaseConfig = {
     MatButtonModule,
     CommonModule,
     AppRoutingModule
+  ],
+  exports: [
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
