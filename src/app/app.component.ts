@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tmp';
+  title: string;
+  constructor(public authService: AuthService) {
+    this.title = 'Track my Portfolio'
+  }
 }
