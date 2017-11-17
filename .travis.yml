@@ -17,7 +17,8 @@ install:
 script:
   # Use Chromium instead of Chrome.
   - export CHROME_BIN=chromium-browser
-  - xvfb-run -a npm run test -- --single-run --no-progress --browser=ChromeNoSandbox -R mocha-lcov-reporter | ./node_modules/.bin/codacy-coverage
+  - xvfb-run -a npm run test -- --single-run --no-progress --browser=ChromeNoSandbox --code-coverage
+  - cat ./coverage/lcov.info | node_modules/.bin/codacy-coverage -p .
   - xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
 
   - ng build --prod
