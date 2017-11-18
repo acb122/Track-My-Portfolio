@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/acb122/Track-My-Portfolio.svg?branch=master)](https://travis-ci.org/acb122/Track-My-Portfolio)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2e631b99ce574645a444a4b237524c1a)](https://www.codacy.com/app/xandercb/Track-My-Portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=acb122/Track-My-Portfolio&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2e631b99ce574645a444a4b237524c1a)](https://www.codacy.com/app/xandercb/Track-My-Portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=acb122/Track-My-Portfolio&amp;utm_campaign=Badge_Coverage)
 
 # TrackMyPortfolio
 
