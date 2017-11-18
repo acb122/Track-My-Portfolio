@@ -7,13 +7,14 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AboutComponent } from './about/about.component';
 import { Router } from '@angular/router';
-import { defer } from 'q';
+import { defer, Deferred } from 'q';
 
 let authSubject: Subject<firebase.User>
-const deferred = defer()
+let deferred: Deferred<String>
 
 describe('AuthService', () => {
   beforeEach(() => {
+    deferred = defer()
     authSubject = new Subject<firebase.User>()
     const fakeFireBaseAuth = {
       auth: jasmine.createSpyObj('auth', ['signOut', 'signInWithPopup'])
