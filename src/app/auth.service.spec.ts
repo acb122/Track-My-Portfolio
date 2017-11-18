@@ -5,7 +5,6 @@ import * as firebase from 'firebase/app'
 import { Subject } from 'rxjs/Subject'
 import { AngularFireAuth } from 'angularfire2/auth';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AboutComponent } from './about/about.component';
 import { Router } from '@angular/router';
 import { defer, Deferred } from 'q';
 
