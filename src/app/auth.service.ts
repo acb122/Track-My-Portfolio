@@ -17,7 +17,9 @@ export class AuthService {
 
   login() {
     this.afAuth.auth.signInWithPopup(new firbase.auth.GoogleAuthProvider())
-      .then(_ => this.router.navigate([`/dashboard`])) // warning
+      .then(_ => {
+        this.router.navigate(['/dashboard'])
+      })
       .catch(error => console.log('auth error', error));
   }
 
