@@ -14,9 +14,11 @@ import { AngularFireModule } from 'angularfire2';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button'
-import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
+import { AppComponent } from './components/app/app.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
+import { AppStateModule } from './state/state.module';
+
 
 export const firebaseConfig = environment.firebaseConfig
 @NgModule({
@@ -37,7 +39,8 @@ export const firebaseConfig = environment.firebaseConfig
     MatToolbarModule,
     MatButtonModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppStateModule
   ],
   exports: [
     MatToolbarModule,

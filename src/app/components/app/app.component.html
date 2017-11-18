@@ -1,0 +1,18 @@
+test
+<mat-toolbar color='primary'>
+  <div fxLayoutAlign="space-between center" class="nav-buttons">
+    <button class="title" mat-button [routerLink]="['/home']">{{title}}</button>
+    <div *ngIf="user$ | async as user">
+      <div *ngIf="!user.uid">
+        <button mat-button [routerLink]="['/about']">About</button>
+        <button (click)="googleLogin()" [class.is-loading]="user.loading">Sign In with Google</button>
+      </div>
+      <button *ngIf="user.uid" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</mat-toolbar>
+<div>
+  <div fxFlexOffset.gt-sm="15%" fxFlex.gt-sm="70%">
+    <router-outlet></router-outlet>
+  </div>
+</div>
