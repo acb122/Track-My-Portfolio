@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { defer, Deferred } from 'q';
 
 let authSubject: Subject<firebase.User>
-let deferred: Deferred
+let deferred: Deferred<String>
 
 describe('AuthService', () => {
   beforeEach(() => {
