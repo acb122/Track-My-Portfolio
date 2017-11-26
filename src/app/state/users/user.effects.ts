@@ -11,7 +11,8 @@ import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/delay';
 import * as userActions from './user.actions';
-export type Action = userActions.All;
+type Action = userActions.All;
+
 @Injectable()
 export class UserEffects {
     constructor(private actions: Actions, private afAuth: AngularFireAuth) { }

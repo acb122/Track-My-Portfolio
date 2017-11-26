@@ -14,37 +14,36 @@ import { AngularFireModule } from 'angularfire2';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button'
-import { AppComponent } from './components/app/app.component';
-import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './components/home/home.component';
+import { AppComponent } from './views/app/app.component';
+import { AboutComponent } from './views/about/about.component';
+import { HomeComponent } from './views/home/home.component';
 import { AppStateModule } from './state/state.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 export const firebaseConfig = environment.firebaseConfig
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
     CommonModule,
     AppRoutingModule,
-    AppStateModule
+    AppStateModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
+  ],
+  declarations: [
+    AppComponent,
+    AboutComponent,
+    HomeComponent
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
